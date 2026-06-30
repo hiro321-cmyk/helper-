@@ -356,3 +356,144 @@ body {
 .send-btn i {
     font-size: 22px;
 }
+
+
+
+
+
+/* ==========================
+   CUSTOM SCROLLBAR
+========================== */
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 20px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* ==========================
+   HOVER EFFECTS
+========================== */
+
+.logo i,
+.theme-btn,
+.send-btn,
+.new-chat {
+    transition: all .3s ease;
+}
+
+.logo i:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.message {
+    animation: fadeUp .4s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==========================
+   FOCUS EFFECT
+========================== */
+
+.input-area textarea:focus {
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* ==========================
+   SELECTION
+========================== */
+
+::selection {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .chat-header h1 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .chat-header {
+        padding: 18px;
+    }
+
+    .chat-box {
+        padding: 20px;
+    }
+
+    .input-area {
+        padding: 18px;
+    }
+
+    .message {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .avatar i {
+        font-size: 20px;
+    }
+
+    .text {
+        padding: 14px;
+    }
+
+    .chat-header h1 {
+        font-size: 18px;
+    }
+
+    .send-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+}
